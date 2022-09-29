@@ -1,0 +1,34 @@
+@mixin styleText ($color, $fs, $fw) {
+    color: $color;
+    font-size: $fs;
+    font-weight: $fw;
+}
+
+@mixin styleButton ($bg, $radius, $border, $py, $px) {
+    background: $bg; 
+    border-radius: $radius;
+    border: $border;
+    padding: $py $px;
+}
+
+
+@mixin styleButtonHover ($bg-hover, $bd-hover, $color-hover) {
+    background: $bg-hover;
+    border-color: $bd-hover;
+    color: $color-hover;
+}
+
+
+@mixin responsive($screen) {
+
+    @if (map-has-key($map: $breakpoints, $key: $screen)) {
+ 
+        $value: map-get($map: $breakpoints, $key: $screen );
+        @media screen and (max-width: $value) { 
+            @content;
+        }
+    }
+    @else {
+        @warn "Sai ten man hinh";
+    }
+}

@@ -1,0 +1,105 @@
+footer {
+    padding: 8em 0;
+    background-image: url("../img/footer_background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-size: 0.9em;
+    
+
+    color: $color-white-1;
+    h4 {
+        margin-bottom: $mg-1 + 1;
+        font-size: $fs-2 + 0.45;
+        font-weight: $fw-4;
+    }
+
+    p {
+        font-size: $fs-5;
+    }
+
+    a {
+        color: #fff;
+        font-size: $fs-5;
+        &:hover {
+            text-decoration: none;
+            opacity: 0.8;
+            color: #fff;
+        }
+    }
+
+    li {
+        list-style: none;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        line-height: 1;
+        padding: 0.8em 0;
+        &:first-child {
+            padding-top: 0;
+        }
+    }
+
+    .email-footer {
+        padding-bottom: 0.5em;
+    }
+
+    .email-footer input {
+        border-radius: 50px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        outline: none;
+        font: inherit;
+        width: 100%;
+        background: transparent;
+        line-height: 1;
+        display: block;
+        padding: 1em;
+        color: $color-white-1;
+        text-align: center;
+      
+    }
+
+    .email-footer input::placeholder {
+        color: white;
+    }
+
+    .subscribe-footer input {
+        box-shadow: 0 0 0 3em #fff inset;
+        color: #181818;
+        border-radius: 50px;
+        outline: none;
+        font: inherit;
+        width: 100%;
+        background: transparent;
+        line-height: 1;
+        display: block;
+        padding: 1em;
+        color: $color-dark-1;
+        text-align: center;
+        border-color: unset;
+        transition: all 0.2s;
+        &:hover {
+            box-shadow: 0 0 0 1px #fff inset;
+            color: #fff;
+        }
+    }
+
+    .footer-list {
+        display: flex;
+    }
+
+    .social i {
+        padding-right: $pdr-1;
+        transition: all 0.2s;
+        &:hover {
+            color: $color-dark-1;
+        }
+    }
+
+    .contact-detail {
+        margin-bottom: $mg-1;
+    }
+
+    .contact-detail p {
+        display: inline;
+        padding-left: $pdl-1;
+    }
+}

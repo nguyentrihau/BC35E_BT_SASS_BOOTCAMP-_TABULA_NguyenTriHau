@@ -1,0 +1,151 @@
+.course {
+    padding-top: $pdt;
+    position: relative;
+    .container{
+        position: relative;
+        z-index: 2;
+    }
+    .bg-course{
+        position: absolute;
+        user-select: none;
+        pointer-events: none;
+        right: 0;
+        bottom: 0;
+        
+    }
+    .row {
+        width: 1000px;
+        max-width: calc(100% - 60px);
+        margin: auto;
+    }
+
+    .form-course {
+        background-color: rgba(255, 255, 255, 1);
+        border-radius: 10px;
+        box-shadow: 0 30px 30px -10px rgb(0 0 0 / 20%);
+        padding-left: 25px;
+        padding-right: 25px;
+        margin-bottom: 50px;
+    }
+
+    .form-course .title {
+        text-align: center;
+        margin-bottom: 50px;
+        @include styleText($color-dark-2, $fs-2 + 1.6, $fw-4);
+    }
+
+    .form-row input {
+        padding: 1em 1em 1em 3.5em !important;
+        font-size: 0.8em !important;
+        height: 3.7em;
+    }
+
+    select {
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 50px;
+        font-size: 0.8em;
+        opacity: 0.8;
+        padding: 0 0 0 3em;
+        &:focus {
+            box-shadow: 0 0 4px 0 rgb(0 0 0 / 10%);
+            border: 1px solid rgba(0, 0, 0, 0.3);
+        }
+    }
+
+    input {
+        border-radius: 50px;
+        &:focus {
+            box-shadow: 0 0 4px 0 rgb(0 0 0 / 10%);
+            border: 1px solid rgba(0, 0, 0, 0.3);
+        }
+    }
+    .form-row{
+        input{
+            position: relative;
+        }
+        .fa-solid{
+            position: absolute;
+            left: 20px;
+            top: 14px;
+            
+        } 
+    }
+    .form-group{
+        .custom-select{
+            position: relative;
+        }
+        .fa-graduation-cap{
+            position: absolute;
+            left: 35px;
+            top: 223px;
+            
+        }
+        .text_area{
+            position: relative;
+            padding: 10px 5px 5px 30px;
+        }
+        .fa-message{
+            position: absolute;
+            left: 35px;
+            line-height: 45px;
+        }
+    }
+    
+
+    textarea {
+        padding-bottom: $pd-2 - 0.1;
+        width: 100%;
+        height: 90px;
+        line-height: 1.5;
+        font-size: 0.8em;
+        border-radius: 20px;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        &:focus-visible {
+            box-shadow: 0 0 4px 0 rgb(0 0 0 / 10%);
+            border: 1px solid rgba(0, 0, 0, 0.3);
+            outline: none;
+        }
+    }
+
+    button {
+        margin-top: $mg-1 + 1;
+        margin-bottom: 100px;
+        border-radius: 50px;
+        width: 150px;
+        height: 4em;
+        box-shadow: 0 0 0 3em $color-purple-1 inset;
+        outline: none;
+        border-color: unset;
+        font-size: 0.8em;
+        font-weight: 600;
+        border: none;
+        color: #fff;
+        transition: all .3s;
+        &:hover {
+            box-shadow: 0 0 0 1px #b61984 inset;
+            color: #b61984;
+        }
+    }
+
+}
+
+
+//responsive
+@include responsive("extra-large") {
+    .course .form-course .title {
+        font-size: 2rem;
+    }
+}
+
+@include responsive("large") {
+    .course .form-course {
+       margin-top: 40px;
+    }
+}
+
+@include responsive("medium") {
+    .course .form-course button {
+        display: block;
+        width: 100%;
+    }
+}

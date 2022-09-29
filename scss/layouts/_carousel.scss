@@ -1,0 +1,54 @@
+.tabula-carousel {
+    position: relative;
+    margin-bottom: 4em;
+    .bg-carousel{
+        position: absolute;
+        right: 0;
+        top: 26.5em;
+        user-select: none;
+    }
+
+    .left-carousel span {
+        @include styleText($color-purple-1, $fs-2, $fw-2);
+        margin-bottom: $mg-3;
+        display: block;
+    }
+    .left-carousel h1 {
+        @include styleText($color-dark-2, $fs-3, $fw-4);
+    }
+}
+
+
+//responsive
+@include responsive("extra-large") {
+    .tabula-carousel .left-carousel h1 {
+        font-size: 3.15rem;
+    }
+    .tabula-carousel .left-carousel span {
+        font-size: 1rem;
+    }
+    .left-carousel {
+        margin-top: 4em;
+    }
+    .tabula-carousel .bg-carousel{
+        top: 23em;
+    }
+}
+@include responsive("large"){
+    .tabula-carousel .bg-carousel{
+        top: 46.7em;
+    }
+}
+@include responsive("medium"){
+    .tabula-carousel .bg-carousel{
+        top: 44.7em;
+    }
+}
+@include responsive("small") {
+    .tabula-carousel .left-carousel h1 {
+        font-size: 2.5rem;
+    }
+    .tabula-carousel .bg-carousel{
+        top: 46.5em;
+    }
+}

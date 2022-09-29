@@ -1,0 +1,60 @@
+.teacher {
+    background-color: #dcd1f3;
+    position: relative;
+    .container{
+        position: relative;
+        z-index: 2;
+    }
+    .bg-teacher{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        pointer-events: none;
+        user-select: none;
+    }
+    .card-item {
+        padding: 20px;
+        border-radius: 10px;
+    }
+    .card {
+        border-radius: 10px;
+        transition: all .5s;
+        height: 100%;
+        &:hover {
+            box-shadow: 0 30px 30px -10px rgb(0 0 0 / 20%);;
+        }
+        border: none;
+    }
+
+    .card-body {
+        text-align: center;
+     
+    }
+    .nationality {
+        @include styleText($color-purple-1, $fs-4, $fw-2);
+        margin-bottom: $mg-3 + 0.2;
+    }
+    .name {
+        @include styleText($color-dark-2, $fs-2 + 0.45, $fw-4);
+        margin-bottom: 15px;
+    }
+    .detail {
+        @include styleText($color-dark-1, $fs-1 + 2, $fw-1);
+        line-height: 1.8em;
+        font-family: 'Roboto', sans-serif;
+    }
+    .zoom-teacher:hover img{
+        transform: scale3d(1.05,1.05,1.05);
+    }
+    .zoom-teacher img {
+        transition: transform 650ms ease-in-out,filter 650ms ease-in-out;
+    }
+    .zoom-teacher {
+        overflow: hidden;
+    }
+
+
+}
+
+
